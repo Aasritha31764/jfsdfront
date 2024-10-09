@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Grid with Navbar</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            overflow-y: auto; /* Allow vertical scrolling */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Navbar Styles */
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Card Grid Styles */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+            gap: 20px;
+            width: 90%;
+            padding: 20px;
+            margin: auto;
+            padding-top: 120px; /* Adjust to account for the fixed navbar */
+        }
+
+        .card {
+            background-color: #fff;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 100%; /* Full width of grid cell */
+        }
+
+        .card:hover {
+            border-color: #101519;
+        }
+
+        .card-image {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50%;
+            border: 3px solid #1b9f3a;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .next-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3eac8f;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+            background-color: #041707;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(1, 1fr); /* 1 card per row on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="card-container">
+        <!-- First Row -->
+        <div class="card">
+            <img src="./images/meala.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Chili Lime Chicken Bowl</h2>
+                <a href="Meal.html" class="next-button">Click</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="./images/mealb.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Avocado Toast</h2>
+                <a href="Meal2.html" class="next-button">Click</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="./images/mealc.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">High-Rimmed Plate</h2>
+                <a href="Meal3.html" class="next-button">Click</a>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="card">
+            <img src="./images/meald.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Cinnamon & Apricot Trail Mix</h2>
+                <a href="Meal8.html" class="next-button">Click</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="./images/meale.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Roti and Paneer Curry</h2>
+                <a href="Meal5.html" class="next-button">Click</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="./images/mealf.jpg" alt="Meal Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Dried Fruits</h2>
+                <a href="Meal6.html" class="next-button">Click</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
